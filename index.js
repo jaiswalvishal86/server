@@ -25,6 +25,7 @@ app.use(cors());
 
 app.post("/api/submit-form", async (req, res) => {
   const data = req.body;
+  const formName = req.get("Referer").split("/").pop();
   try {
     let organizationId = null;
     let personId = null;
@@ -74,7 +75,7 @@ app.post("/api/submit-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: "New Lead Webflow Hiring Form",
+        title: `New Lead from ${formName}`,
         person_id: personId,
         organization_id: organizationId,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
