@@ -75,7 +75,7 @@ app.post("/api/submit-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: `New Lead from ${formName}`,
+        title: `New Lead from ${data.formName}`,
         person_id: personId,
         organization_id: organizationId,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
