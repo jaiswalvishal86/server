@@ -274,6 +274,7 @@ app.post("/api/clutch-top-form", async (req, res) => {
     const personData = {
       name: data.name,
       email: [{ value: data.email, primary: true }],
+      phone: "not available",
       org_id: organizationId,
     };
 
@@ -347,6 +348,7 @@ app.post("/api/landing-bottom-form", async (req, res) => {
       const personData = {
         name: data.name,
         email: [{ value: data.email, primary: true }],
+        phone: data.phone,
         org_id: organizationId,
       };
 
@@ -429,7 +431,7 @@ app.post("/api/clutch-bottom-form", async (req, res) => {
       const personData = {
         name: data.name,
         email: [{ value: data.email, primary: true }],
-        phone: data.phone,
+        phone: "not available",
         org_id: organizationId,
       };
 
