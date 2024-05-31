@@ -274,7 +274,6 @@ app.post("/api/clutch-top-form", async (req, res) => {
     const personData = {
       name: data.name,
       email: [{ value: data.email, primary: true }],
-      phone: 123456789,
       org_id: organizationId,
     };
 
@@ -431,7 +430,6 @@ app.post("/api/clutch-bottom-form", async (req, res) => {
       const personData = {
         name: data.name,
         email: [{ value: data.email, primary: true }],
-        phone: 123456789,
         org_id: organizationId,
       };
 
