@@ -75,9 +75,10 @@ app.post("/api/submit-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: `New Lead from ${data.formName}`,
+        title: data.name,
         person_id: personId,
         organization_id: organizationId,
+        "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
         "5fd6a4e3043b2f7083183f47c8b3e7ffd71c0c9d": data.designation,
       };
@@ -140,9 +141,10 @@ app.post("/api/popup-form", async (req, res) => {
 
   if (personId && organizationId) {
     const leadData = {
-      title: `New Lead from ${data.formName}`,
+      title: data.name,
       person_id: personId,
       organization_id: organizationId,
+      "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
       "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
       "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
     };
@@ -215,9 +217,10 @@ app.post("/api/contact-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: `New Lead from ${data.formName}`,
+        title: data.name,
         person_id: personId,
         organization_id: organizationId,
+        "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
         "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
         "a1150e64811fbc3a7d1722af03cb79f9f81d2d2e": data.industries,
@@ -290,9 +293,10 @@ app.post("/api/clutch-top-form", async (req, res) => {
 
   if (personId && organizationId) {
     const leadData = {
-      title: `New Lead from ${data.formName}`,
+      title: data.name,
       person_id: personId,
       organization_id: organizationId,
+      "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
       "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
     };
 
@@ -365,9 +369,10 @@ app.post("/api/landing-bottom-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: `New Lead from ${data.formName}`,
+        title: data.name,
         person_id: personId,
         organization_id: organizationId,
+        "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
         "5fd6a4e3043b2f7083183f47c8b3e7ffd71c0c9d": data.designation,
         "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
@@ -447,9 +452,10 @@ app.post("/api/clutch-bottom-form", async (req, res) => {
     // Create lead
     if (personId && organizationId) {
       const leadData = {
-        title: `New Lead from ${data.formName}`,
+        title: data.name,
         person_id: personId,
         organization_id: organizationId,
+        "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
         "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
       };
