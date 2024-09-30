@@ -80,6 +80,7 @@ app.post("/api/submit-form", async (req, res) => {
         organization_id: organizationId,
         "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
+        "3a7721066b0c80c8b0ca26d6219b26980197efa4": data.budget,
         "5fd6a4e3043b2f7083183f47c8b3e7ffd71c0c9d": data.designation,
       };
 
@@ -223,16 +224,16 @@ app.post("/api/contact-form", async (req, res) => {
         "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
         "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
-        "a1150e64811fbc3a7d1722af03cb79f9f81d2d2e": data.industries,
+        a1150e64811fbc3a7d1722af03cb79f9f81d2d2e: data.industries,
         "5e99575c1a03dbb790c50e7429b7589d46d9e996": data.company_website,
         "53790a4b55d0f6e236b0994e075e24fcfdac6b59": data.web_development,
         "4fbf87f81e0634371d944eacd7d9a2e4d57c80e5": data.app_development,
-        "ba88fff9a3559e77757db9aaef59d116e89538b7": data.ui_ux_design,
-        "f04fdf9e3e2ed10c0e08dbf3ee1a06d765f29062": data.dev_ops_cloud,
-        "debe0db18bd925136826b8d52b86e2a4b5135248": data.seo,
-        "ee1515a4a48dd3121b08392266defb4d12a2ff77": data.ar_vr,
+        ba88fff9a3559e77757db9aaef59d116e89538b7: data.ui_ux_design,
+        f04fdf9e3e2ed10c0e08dbf3ee1a06d765f29062: data.dev_ops_cloud,
+        debe0db18bd925136826b8d52b86e2a4b5135248: data.seo,
+        ee1515a4a48dd3121b08392266defb4d12a2ff77: data.ar_vr,
         "2e18c16492c868c5e893b531907d250719e7ff5f": data.maintenance_upgrade,
-        "e2639af860c19bce1dac62b1804d02c8719f7140": data.game_development,
+        e2639af860c19bce1dac62b1804d02c8719f7140: data.game_development,
       };
 
       const leadResponse = await axios.post(
@@ -255,7 +256,6 @@ app.post("/api/contact-form", async (req, res) => {
       .json({ message: "Error processing form data", error: error.message });
   }
 });
-
 
 app.post("/api/clutch-top-form", async (req, res) => {
   const data = req.body;
@@ -297,7 +297,7 @@ app.post("/api/clutch-top-form", async (req, res) => {
       person_id: personId,
       organization_id: organizationId,
       "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
-      "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
+      e8be7d07dc0a0bd4431410e0ec19fabd918399c2: data.services,
     };
 
     const leadResponse = await axios.post(
@@ -315,7 +315,6 @@ app.post("/api/clutch-top-form", async (req, res) => {
     }
   }
 });
-
 
 app.post("/api/landing-bottom-form", async (req, res) => {
   const data = req.body;
@@ -375,7 +374,7 @@ app.post("/api/landing-bottom-form", async (req, res) => {
         "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
         "856d510f94582b0d7d7ce7b22628d5287c8d0e6a": data.code,
         "5fd6a4e3043b2f7083183f47c8b3e7ffd71c0c9d": data.designation,
-        "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
+        e8be7d07dc0a0bd4431410e0ec19fabd918399c2: data.services,
         "3a7721066b0c80c8b0ca26d6219b26980197efa4": data.budget,
         "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
       };
@@ -456,7 +455,7 @@ app.post("/api/clutch-bottom-form", async (req, res) => {
         person_id: personId,
         organization_id: organizationId,
         "0f9266fba6531a0fe00a4ceed940769f98307968": data.formName,
-        "e8be7d07dc0a0bd4431410e0ec19fabd918399c2": data.services,
+        e8be7d07dc0a0bd4431410e0ec19fabd918399c2: data.services,
         "05ffd2968a78543c2c6092c73ca718f915281197": data.message,
       };
 
@@ -484,6 +483,3 @@ app.post("/api/clutch-bottom-form", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
-
-// export { app };
-// export const handler = serverless(app);
